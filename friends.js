@@ -27,12 +27,16 @@
 
 const startButton = document.getElementById("start-btn");
 const questionContainerElement = document.getElementById("question-container"); //allows questions to be shown
+const gameQuestions = document.getElementById("questions");
+// const shuffleQuestions, currentQuestionsIndex;
 
 startButton.addEventListener("click", startGame);
 // function to start the game
 function startGame() {
   console.log("started");
   startButton.classList.add("hide"); //hiding start button
+  //   shuffleQuestions = questions.sort(() => Math.random() - 0.5);
+  //   currentQuestionsIndex = 0;
   questionContainerElement.classList.remove("hide"); //shows question
   setNextQuestion();
 }
@@ -47,7 +51,7 @@ function selectAnswer() {}
 
 const questions = [
   {
-    questions: "Which city did the show take place in?",
+    question: "Which city did the show take place in?",
     answers: [
       { value: 0, answer: "Boston" },
       { value: 0, answer: "Chicago" },
